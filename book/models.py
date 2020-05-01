@@ -1,3 +1,4 @@
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 
 # Create your models here.
@@ -40,7 +41,7 @@ class Book(models.Model):
     baskisira=models.IntegerField()
     yayinevi=models.CharField(max_length=50)
     stok= models.IntegerField()
-    detail=models.TextField()
+    detail=RichTextUploadingField()
     status=models.CharField(max_length=10,choices=STATUS)
     slug=models.SlugField()
     created_at=models.DateTimeField(auto_now_add=True)
