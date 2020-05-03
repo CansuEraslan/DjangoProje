@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
-from book.models import Category, Book
+from book.models import Category, Book, Images
 from home.models import Setting, ContactFormu, ContactFormMessage
 
 
@@ -63,3 +63,13 @@ def category_products(request,id,slug):
              'categorydata':categorydata
              }
     return render(request, 'books.html', context)
+
+def product_detail(request,id,slug):
+    category = Category.objects.all()
+    product = Book.objects.get(pk=id)
+    images = Images.objects.filter(book_id=id)
+    context = {'product':product,
+               'category': category,
+               'images':images,
+               }
+    return render(request, 'product_detail.html',context)
