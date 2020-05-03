@@ -11,10 +11,16 @@ def index(request):
     setting=Setting.objects.get(pk=1)
     sliderdata = Book.objects.all()[:4]
     category = Category.objects.all()
+    dayproduct=Book.objects.all()[:3]
+    lastproduct = Book.objects.all().order_by('-id')[:3]
+    randomproduct = Book.objects.all().order_by('?')[:3]
     context={'setting':setting,
              'category': category,
              'sliderdata':sliderdata,
-             'page':'home'}
+             'page':'home',
+             'dayproduct':dayproduct,
+             'lastproduct':lastproduct,
+             'randomproduct':randomproduct,}
     return render(request, 'index.html', context)
 def hakkimizda(request):
     setting=Setting.objects.get(pk=1)
@@ -44,7 +50,8 @@ def iletisim(request):
             return  HttpResponseRedirect('/iletisim')
     setting=Setting.objects.get(pk=1)
     form=ContactFormu()
-    context={'setting':setting,'form':form}
+    category = Category.objects.all()
+    context={'setting':setting,'form':form,'category':category}
     return render(request, 'iletisim.html', context)
 
 def category_products(request,id,slug):
