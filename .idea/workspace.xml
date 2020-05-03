@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ce63810-8a4a-49a6-95cc-4bb2abc447b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/home/templates/books.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sidebar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mysite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -105,7 +104,7 @@
       <workItem from="1588429909974" duration="7188000" />
       <workItem from="1588440226274" duration="5635000" />
       <workItem from="1588453993991" duration="6420000" />
-      <workItem from="1588509671951" duration="2030000" />
+      <workItem from="1588509671951" duration="6020000" />
     </task>
     <task id="LOCAL-00001" summary="11.Video CKEDITOR">
       <created>1588358727726</created>
@@ -135,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588440604820</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="15.Video Category alt kategori">
+      <created>1588511968228</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588511968228</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,13 +152,14 @@
     <MESSAGE value="12.Video hakkımızda,referanslar,iletişim" />
     <MESSAGE value="13.Video iletişim formu" />
     <MESSAGE value="14.Video slider" />
-    <option name="LAST_COMMIT_MESSAGE" value="14.Video slider" />
+    <MESSAGE value="15.Video Category alt kategori" />
+    <option name="LAST_COMMIT_MESSAGE" value="15.Video Category alt kategori" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1588440599416">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1588511964856">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588440599416" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588511964856" />
     <state x="463" y="122" key="FileChooserDialogImpl" timestamp="1588440538978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -161,10 +168,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588370809885" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1588440612292">
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1588511977682">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588440612292" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588511977682" />
     <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588440641745">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
