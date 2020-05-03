@@ -15,9 +15,9 @@
             <div class="row">
                 <div class="col-12">
                     <ol class="breadcrumb d-flex align-items-center">
-                         <li class="breadcrumb-item"><a href="/">Anasayfa</a></li>
-                            <li class="breadcrumb-item"><a href="/category/{{product.category_id}}/{{product.category.slug}}">{{product.category}}</a></li>
-                            <li class="breadcrumb-item active">{{product.title}}</li>
+                        <li class="breadcrumb-item"><a href="/">Anasayfa</a></li>
+                        <li class="breadcrumb-item"><a href="/category/{{product.category_id}}/{{product.category.slug}}">{{product.category}}</a></li>
+                        <li class="breadcrumb-item active">{{product.title}}</li>
                     </ol>
                     <!-- btn --> <a href="/category/{{product.category_id}}/{{product.category.slug}}" class="backToHome d-block"><i class="fa fa-angle-double-left"></i> Back to Category</a>
                 </div>
@@ -36,8 +36,8 @@
                                 <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url({{product.image.url}});">
                                 </li>
                                 {% for rs in images %}
-                                <li data-target="#product_details_slider" data-slide-to="1" style="background-image: url({{rs.image.url}});">
-                                </li>
+                                    <li data-target="#product_details_slider" data-slide-to="1" style="background-image: url({{rs.image.url}});">
+                                    </li>
                                 {% endfor %}
                             </ol>
 
@@ -48,11 +48,11 @@
                                     </a>
                                 </div>
                                 {% for rs in images %}
-                                <div class="carousel-item">
-                                    <a class="gallery_img" href="{{rs.image.url}}">
-                                        <img class="d-block w-100" src="{{rs.image.url}}" alt="Second slide" style="height: 500px">
-                                    </a>
-                                </div>
+                                    <div class="carousel-item">
+                                        <a class="gallery_img" href="{{rs.image.url}}">
+                                            <img class="d-block w-100" src="{{rs.image.url}}" alt="Second slide" style="height: 500px">
+                                        </a>
+                                    </div>
                                 {% endfor %}
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star-o" aria-hidden="true"></i>
                         </div>
-                                                <!-- Add to Cart Form -->
+                        <!-- Add to Cart Form -->
                         <form class="cart clearfix mb-50 d-flex" method="post">
                             <div class="quantity">
                                 <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
@@ -115,24 +115,83 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
-                                    <div class="card-header" role="tab" id="headingThree">
-                                        <h6 class="mb-0">
-                                            <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Yorumlar</a>
-                                        </h6>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-                                        <div class="card-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quo sint repudiandae suscipit ab soluta delectus voluptate, vero vitae, tempore maxime rerum iste dolorem mollitia perferendis distinctio. Quibusdam laboriosam rerum distinctio. Repudiandae fugit odit, sequi id!</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae qui maxime consequatur laudantium temporibus ad et. A optio inventore deleniti ipsa.</p>
-                                        </div>
-                                    </div>
-                                </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
+    <div class="checkout_area section_padding_100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
 
+                    <div class="cart-page-heading">
+                        <h5>Yorum Yazınız</h5>
+                    </div>
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}" roles="alert">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <form action="/book/addcomment/{{ product.id }}" method="post">
+                        <div class="row">
+                            {% csrf_token %}
+                            <div class="col-md-6 mb-3">
+                                <label for="subject">Subject <span>*</span></label>
+                                <input type="text" class="form-control" name="subject" id="id_subject"/>
+                            </div>
+                            <div class="col-md-10 mb-3">
+                                <label for="comment">Yorum <span>*</span></label>
+                                <textarea class="form-control h-75" name="comment" id="id_comment" ></textarea>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-10 mb-3">
+                                    <h5>Değerlendirme: </h5>
+                                    <input type="radio" id="star1" name="rate" value="1"/> <label for="star1"></label>
+                                    <input type="radio" id="star2" name="rate" value="2"/><label for="star2"></label>
+                                    <input type="radio" id="star3" name="rate" value="3"/> <label for="star3"></label>
+                                    <input type="radio" id="star4" name="rate" value="4"/><label for="star4"></label>
+                                    <input type="radio" id="star5" name="rate" value="5"/><label for="star5"></label>
+                                </div>
+                            </div>
+                            <div class="col-md-10 mb-5">
+                                {% if user.id is not None %}
+                                    <button class="btn karl-checkout-btn">Gönder</button>
+                                {% else %}
+                                    Yorum eklemek için <a href="/login">giriş</a>  yapınız.
+                                {% endif %}
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div><h5>YORUMLAR</h5></div>
+                    {% for rs in comments %}
+                        <div class="single_product_desc">
+                            <div><h4 class="title">{{ rs.users.first_name }}</h4>
+                            </div>
+                            <div><h9 class="title">{{ rs.created_at }}</h9>
+                            </div>
+                            <div class="single_product_ratings mb-15">
+                                <i class="fa fa-star{% if rs.rate < 1 %}-o{% endif %}" aria-hidden="true"></i>
+                                <i class="fa fa-star{% if rs.rate < 2 %}-o{% endif %}" aria-hidden="true"></i>
+                                <i class="fa fa-star{% if rs.rate < 3 %}-o{% endif %}" aria-hidden="true"></i>
+                                <i class="fa fa-star{% if rs.rate < 4 %}-o{% endif %}" aria-hidden="true"></i>
+                                <i class="fa fa-star{% if rs.rate < 5 %}-o{% endif %}" aria-hidden="true"></i>
+                            </div>
+                            <div><h7 class="title">{{ rs.subject }}</h7>
+                                <p>{{ rs.comment }}</p>
+                            </div>
+                            <hr>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            </div>
 {% endblock %}
