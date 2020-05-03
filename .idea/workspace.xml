@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1ce63810-8a4a-49a6-95cc-4bb2abc447b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/karl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/karl/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/iletisim.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/iletisim.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sidebar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +38,7 @@
   </component>
   <component name="ProjectId" id="1bJBvlYxgamuWZ9mmR9oNq8UcF2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -103,7 +103,9 @@
       <updated>1588340548461</updated>
       <workItem from="1588340551035" duration="25468000" />
       <workItem from="1588429909974" duration="7188000" />
-      <workItem from="1588440226274" duration="312000" />
+      <workItem from="1588440226274" duration="5635000" />
+      <workItem from="1588453993991" duration="6420000" />
+      <workItem from="1588509671951" duration="2030000" />
     </task>
     <task id="LOCAL-00001" summary="11.Video CKEDITOR">
       <created>1588358727726</created>
@@ -126,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588371710358</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="14.Video slider">
+      <created>1588440604820</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588440604820</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,13 +145,14 @@
     <MESSAGE value="11.Video CKEDITOR" />
     <MESSAGE value="12.Video hakkımızda,referanslar,iletişim" />
     <MESSAGE value="13.Video iletişim formu" />
-    <option name="LAST_COMMIT_MESSAGE" value="13.Video iletişim formu" />
+    <MESSAGE value="14.Video slider" />
+    <option name="LAST_COMMIT_MESSAGE" value="14.Video slider" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1588371708370">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1588440599416">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588371708370" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588440599416" />
     <state x="463" y="122" key="FileChooserDialogImpl" timestamp="1588440538978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -151,13 +161,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588370809885" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1588371765820">
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1588440612292">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588371765820" />
-    <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588371776743">
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588440612292" />
+    <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588440641745">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1588371776743" />
+    <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1588440641745" />
   </component>
 </project>

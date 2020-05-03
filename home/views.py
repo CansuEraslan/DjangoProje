@@ -10,17 +10,24 @@ from home.models import Setting, ContactFormu, ContactFormMessage
 def index(request):
     setting=Setting.objects.get(pk=1)
     sliderdata = Book.objects.all()[:4]
-    context={'setting':setting,'sliderdata':sliderdata,'page':'home'}
+    category = Category.objects.all()
+    context={'setting':setting,
+             'category': category,
+             'sliderdata':sliderdata,
+             'page':'home'}
     return render(request, 'index.html', context)
 def hakkimizda(request):
     setting=Setting.objects.get(pk=1)
     category = Category.objects.all()
-    context={'setting':setting,'page':'hakkimizda','category':category}
+    context={'setting':setting,
+             'page':'hakkimizda',
+             'category':category}
     return render(request, 'hakkimizda.html', context)
 def referanslar(request):
     setting=Setting.objects.get(pk=1)
     category = Category.objects.all()
-    context={'setting':setting,'category':category}
+    context={'setting':setting,
+             'category':category}
     return render(request, 'referanslar.html', context)
 def iletisim(request):
     if request.method=='POST':
