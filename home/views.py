@@ -1,9 +1,13 @@
+import json
+
 from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
 from book.models import Category, Book, Images, Comment
+from home.forms import SearchForm
+
 from home.models import Setting, ContactFormu, ContactFormMessage
 
 
@@ -75,3 +79,36 @@ def product_detail(request,id,slug):
                'comments':comments
                }
     return render(request, 'product_detail.html',context)
+
+def product_search(request):
+    if request.method=='POST':
+        form=SearchForm(request.POST)
+        if form.is_valid():
+            category=Category.objects.all()
+            query=form.cleaned_data['query']
+            catid=form.cleaned_data['catid']
+            if catid==0:
+                products=Book.objects.filter(title__icontains=query)
+            else:
+                products = Book.objects.filter(title__icontains=query,category_id=catid)
+            context = {'products': products,
+                       'category': category,
+                       }
+            return render(request, 'product_search.html', context)
+    return HttpResponseRedirect('/')
+
+
+def product_search_auto(request):
+    if request.is_ajax():
+        q=request.GET.get('term','')
+        product=Book.objects.filter(title__icontains=q)
+        results=[]
+        for rs in product:
+            product_json={}
+            product_json=rs.title
+            results.append(product_json)
+        data=json.dumps(results)
+    else:
+        data='fail'
+    mimetype='application/json'
+    return HttpResponse(data,mimetype)
