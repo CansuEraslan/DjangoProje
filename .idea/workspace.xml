@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ce63810-8a4a-49a6-95cc-4bb2abc447b6" name="Default Changelist" comment="20-21-22.videolar">
-      <change afterPath="$PROJECT_DIR$/home/templates/login.html" afterDir="false" />
+    <list default="true" id="1ce63810-8a4a-49a6-95cc-4bb2abc447b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/home/templates/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/urls.py" afterDir="false" />
     </list>
@@ -107,7 +108,9 @@
       <workItem from="1588453993991" duration="6420000" />
       <workItem from="1588509671951" duration="32502000" />
       <workItem from="1588615721928" duration="9959000" />
-      <workItem from="1588627991470" duration="9826000" />
+      <workItem from="1588627991470" duration="9893000" />
+      <workItem from="1588693573878" duration="5871000" />
+      <workItem from="1588709256273" duration="2706000" />
     </task>
     <task id="LOCAL-00001" summary="11.Video CKEDITOR">
       <created>1588358727726</created>
@@ -186,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588628104816</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="23.video user login logout">
+      <created>1588641380359</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1588641380359</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,17 +213,18 @@
     <MESSAGE value="18.Video Ürün Detay" />
     <MESSAGE value="19.Video Ürün Yorum Ekleme" />
     <MESSAGE value="20-21-22.videolar" />
-    <option name="LAST_COMMIT_MESSAGE" value="20-21-22.videolar" />
+    <MESSAGE value="23.video user login logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="23.video user login logout" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588628474990">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1588628474990" />
-    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1588629014783">
+    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1588641377788">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588629014783" />
+    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588641377788" />
     <state x="463" y="122" key="FileChooserDialogImpl" timestamp="1588440538978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -222,10 +233,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588628440754" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1588628107683">
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1588641384905">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588628107683" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588641384905" />
     <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588440641745">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

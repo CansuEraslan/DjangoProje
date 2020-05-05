@@ -7,7 +7,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from book.models import Category, Book, Images, Comment
-from home.forms import SearchForm
+from home.forms import SearchForm, SignUpForm
 
 from home.models import Setting, ContactFormu, ContactFormMessage
 
@@ -137,3 +137,19 @@ def login_view(request):
     setting = Setting.objects.get(pk=1)
     context = {'category': category,'setting':setting,}
     return render(request, 'login.html', context)
+
+def signup_view(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = request.POST['username']
+            password = request.POST['password1']
+            user = authenticate(request, username=username, password=password)
+            login(request, user)
+            return HttpResponseRedirect('/')
+    form = SignUpForm()
+    category = Category.objects.all()
+    setting = Setting.objects.get(pk=1)
+    context = {'category': category,'form':form, 'setting': setting, }
+    return render(request, 'signup.html', context)
