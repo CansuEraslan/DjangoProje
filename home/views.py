@@ -10,6 +10,7 @@ from book.models import Category, Book, Images, Comment
 from home.forms import SearchForm, SignUpForm
 
 from home.models import Setting, ContactFormu, ContactFormMessage
+from order.models import ShopCart
 
 
 def index(request):
@@ -19,6 +20,8 @@ def index(request):
     dayproduct=Book.objects.all()[:3]
     lastproduct = Book.objects.all().order_by('-id')[:3]
     randomproduct = Book.objects.all().order_by('?')[:3]
+    current_user = request.user
+    request.session['cart_items'] = ShopCart.objects.filter(user_id=current_user.id).count()
     context={'setting':setting,
              'category': category,
              'sliderdata':sliderdata,
