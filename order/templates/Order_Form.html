@@ -1,0 +1,112 @@
+{% extends "homebase.html" %}
+{% block title %}Shop Cart {% endblock %}
+{% block keywords %}{{ categorydata.keywords }} {% endblock %}
+{% block description %}{{ categorydata.description }}  {% endblock %}
+
+{% block head %}<link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />{% endblock %}
+{% block sidebar %}
+    {% include "sidebar.html" %}
+{% endblock %}
+
+
+{% block content %}
+    <div class="breadcumb_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ol class="breadcrumb d-flex align-items-center">
+                        <li class="breadcrumb-item"><a href="/">Anasayfa</a></li>
+                        <li class="breadcrumb-item">Sipariş Formu</li>
+                    </ol>
+                    <!-- btn -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="checkout_area section_padding_5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-md-6">
+                    <div class="checkout_details_area mt-50 clearfix">
+
+                        <div class="cart-page-heading">
+                            <h3>Adres Bilgisi</h3>
+
+                        </div>
+
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="first_name">First Name <span>*</span></label>
+                                    <input type="text" class="form-control" name="first_name" value="{{ user.first_name }}">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="last_name">Last Name <span>*</span></label>
+                                    <input type="text" class="form-control" name="last_name" value="{{ user.last_name }}">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="street_address">Address <span>*</span></label>
+                                    <input type="text" class="form-control mb-3" name="address" value="{{ profile.address }}">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="phone_number">Phone No <span>*</span></label>
+                                    <input type="text" class="form-control" name="phone" min="0" value="{{ profile.phone}}">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="country">City <span>*</span></label>
+                                    <select class="custom-select d-block w-100" name="city">
+                                        <option value="{{profile.city }}" selected>{{ profile.city }}</option>
+                                        <option value="İstanbul">İstanbul</option>
+                                        <option value="İzmir">İzmir</option>
+                                        <option value="Ankara">Ankara</option>
+                                        <option value="Bursa">Bursa</option>
+                                        <option value="Konya">Konya</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="country">Country <span>*</span></label>
+                                    <input type="text" class="form-control mb-3" name="country" value="{{ profile.country }}">
+                                </div>
+                                <button type="submit" class="btn karl-checkout-btn">Siparişi Tamamla</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-5 ml-lg-auto">
+                    <div class="order-details-confirmation" style="width: 560px;">
+
+                        <div class="cart-page-heading">
+                            <h5>Siparişlerin</h5>
+                        </div>
+                        <table class="table table-responsive">
+
+
+                            <thead>
+                            <tr>
+                                <th>Ürünler</th>
+                                <th>Adet</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for rs in shopcart %}
+                                <tr>
+                                    <td class="cart_product_img d-flex align-items-center">
+                                        <img src="{{rs.product.image.url}}" alt="Product" style="width: 200px; height: 150px;"></a>
+                                        <h6>{{rs.product}}</h6>
+                                    </td>
+                                    <td class="qty">{{ rs.quantity }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -11,6 +11,7 @@
 
 {% block content %}
     <div class="breadcumb_area">
+
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -27,8 +28,9 @@
         <div class="container">
             <div class="row">
 
+
                 <div class="col-12 col-md-8 col-lg-9">
-                <h1>{{categorydata.title}}</h1>
+                    <h1>{{categorydata.title}}</h1>
                     <div class="shop_grid_product_area">
                         <div class="row">
                             {% for rs in products %}
@@ -38,7 +40,7 @@
                                     <div class="product-img">
                                         <img src="{{ rs.image.url }}" alt="" style="height: 250px">
                                         <div class="product-quicview">
-                                            <a href="/book/{{ rs.id }}/{{ rs.slug }}" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                                            <a href="/book/{{ rs.id }}/{{ rs.slug }}" data-target="#quickview"><i class="ti-plus"></i></a>
                                         </div>
                                     </div>
                                     <!-- Product Description -->

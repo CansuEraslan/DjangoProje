@@ -16,7 +16,7 @@
                 <div class="col-12">
                     <ol class="breadcrumb d-flex align-items-center">
                         <li class="breadcrumb-item"><a href="/">Anasayfa</a></li>
-                        <li class="breadcrumb-item"><a href="/user/user_profile">User Profile</a></li>
+                        <li class="breadcrumb-item">User Profile</li>
                     </ol>
                     <!-- btn -->
                 </div>
@@ -44,9 +44,13 @@
                     <div class="cart-table clearfix">
                         <table class="table table-responsive">
                             <tr>
-                                <th class="text-left"></th>
+                                <th class="text-left">
+                                    <a href="/user/update" class="btn karl-checkout-btn">Profil Güncelle</a>
+                                    <a href="/user/password" class="btn karl-checkout-btn">Pasaport Değiştir</a>
+
+                                </th>
                                 <td class="cart_product_img d-flex align-items-center">
-                                    <a href="#"><img src="{{profile.image.url}}" alt="Product"></a>
+                                    <a href="#"><img src="{{profile.image.url}}" alt="Product" style="border-radius: 45px; height:200px"></a>
                                 </td>
                             </tr>
                             <tr>

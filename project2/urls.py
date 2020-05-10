@@ -36,6 +36,8 @@ urlpatterns = [
     path('iletisim/',views.iletisim, name='iletisim'),
 
 
+
+
     path('category/<int:id>/<slug:slug>/',views.category_products, name='category_products'),
     path('book/<int:id>/<slug:slug>/',views.product_detail,name='product_detail'),
     path('search/',views.product_search, name='product_search'),

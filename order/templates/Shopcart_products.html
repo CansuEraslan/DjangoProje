@@ -23,13 +23,13 @@
             </div>
         </div>
     </div>
-    <div class="cart_area section_padding_100 clearfix">
+    <div class="cart_area section_padding_0_100 clearfix">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="cart-table clearfix">
+                    <div class="cart-table clearfix" style="width: 1000px">
                         <h3>Sepet Ürün Listesi</h3>
-                        <table class="table table-responsive">
+                        <table class="table table-responsive" style="width: 1000px">
                             {% if messages %}
                                 {% for message in messages %}
                                     <div class="alert alert-{{ message.tags }}" roles="alert">
@@ -50,12 +50,12 @@
                             {% for rs in shopcart %}
                                 <tr>
                                     <td class="cart_product_img d-flex align-items-center">
-                                        <img src="{{rs.product.image.url}}" alt="Product" style="width: 450px; height: 250px;"></a>
+                                        <img src="{{rs.product.image.url}}" alt="Product"></a>
                                         <h6>{{rs.product}}</h6>
                                     </td>
 
-                                    <td class="qty">{{ rs.quantity }}</td>
-                                    <td class="qty"><a href="/order/deletefromcart/{{ rs.id }}" class="button" onclick="return confirm('Ürün silinecektir.Emin misniz?')"><button type="delete" class="btn cart-submit d-block">Sil</button></a></td>
+                                    <td class="qty"><div class="quantity"> {{ rs.quantity }}</div></td>
+                                    <td class="total_price"><a href="/order/deletefromcart/{{ rs.id }}" class="button" onclick="return confirm('Ürün silinecektir.Emin misniz?')"><button type="delete" class="btn cart-submit d-block">Sil</button></a></td>
                                 </tr>
                             {% endfor %}
                             </tbody>
@@ -64,22 +64,15 @@
 
                     <div class="cart-footer d-flex mt-30">
                         <div class="back-to-shop w-50">
-                            <a href="shop-grid-left-sidebar.html">Alışverişe Devam Et</a>
+                            <a href="/">Alışverişe Devam Et</a>
                         </div>
                         <div class="update-checkout w-50 text-right">
-                            <a href="/order/deletefromcart/{{ rs.id }}">Sepeti Temizle</a>
-
+                            <a href="/order/orderproduct" class="btn karl-checkout-btn">ÖDÜNÇ AL</a>
                         </div>
                     </div>
-
                 </div>
             </div>
-            <div class="col-12 col-lg-4">
-                <div class="cart-total-area mt-70">
 
-                    <a href="checkout.html" class="btn karl-checkout-btn">Alışverişi Onayla</a>
-                </div>
-            </div>
         </div>
     </div>
 
