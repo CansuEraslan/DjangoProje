@@ -33,6 +33,7 @@ class Order(models.Model):
         ('Onshipping','Onshipping'),
         ('Completed', 'Completed'),
         ('Canceled', 'Canceled'),
+        ('Library', 'Library'),
     )
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     code=models.CharField(max_length=5,editable=False)

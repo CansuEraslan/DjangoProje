@@ -68,6 +68,7 @@ def shopcart(request):
     context={'category':category,
              'shopcart':shopcart,
              'setting':setting,
+
              }
     return render(request,'Shopcart_products.html',context)
 
@@ -87,6 +88,7 @@ def deletefromcart(request,id):
 @login_required(login_url='/login')
 def orderproduct(request):
     category=Category.objects.all()
+    setting = Setting.objects.get(pk=1)
     current_user=request.user
     shopcart = ShopCart.objects.filter(user_id=current_user.id)
     total=0
@@ -125,16 +127,16 @@ def orderproduct(request):
             ShopCart.objects.filter(user_id=current_user.id).delete()
             request.session['cart_items']=0
             messages.success(request,"Sipariş işlemi tamamlanmıştır,Teşekkür ederiz")
-            return render(request,'Order_Completed.html',{'ordercode':ordercode,'category':category})
+            return render(request,'Order_Completed.html',{'ordercode':ordercode,'category':category,})
         else:
             messages.warning(request,form.errors)
             return HttpResponseRedirect("/order/orderproduct")
 
     form=OrderForm()
-    profile=UserProfile.objects.get(user_id=current_user.id)
+
     context={'shopcart':shopcart,
              'category':category,
              'form':form,
-             'profile':profile,
+             'setting':setting
              }
     return render(request,'Order_Form.html',context)

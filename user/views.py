@@ -40,7 +40,6 @@ def user_update(request):
             'setting': setting,
             'user_form': user_form,
             'profile_form': profile_form,
-
         }
         return render(request,'user_update.html',context)
 
@@ -64,7 +63,6 @@ def change_password(request):
             'form':form,
             'category': category,
             'setting': setting,
-
         })
 
 @login_required(login_url='/login')
@@ -77,6 +75,7 @@ def orders(request):
         'category': category,
         'setting': setting,
         'orders': orders,
+
     }
     return render(request,'user_orders.html',context)
 

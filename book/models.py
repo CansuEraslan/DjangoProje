@@ -49,7 +49,7 @@ class Book(models.Model):
         ('False', 'Hayır'),
     )
     category=models.ForeignKey(Category,on_delete=models.CASCADE)
-    title= models.CharField(max_length=30)
+    title= models.CharField(max_length=100)
     keywords=models.CharField(max_length=255)
     description=models.CharField(max_length=255)
     image=models.ImageField(blank=True,upload_to='images/')
@@ -69,7 +69,7 @@ class Book(models.Model):
 
     def image_tag(self):
         return mark_safe('<img src="{}" height="50"/>'.format(self.image.url))
-    image_tag.short_decription = 'Image'
+    image_tag.short_description = 'Image'
 
     def get_absolute_url(self):
         return reverse('product_detail',kwargs={'slug':self.slug})

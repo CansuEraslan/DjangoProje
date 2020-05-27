@@ -8,22 +8,19 @@
     <!--  Side Nav  -->
     <div class="nav-side-menu">
         <div class="menu-list">
-            <h6>Categories</h6>
-
+            <h6>Kitap Kategori</h6>
             {% load mptt_tags %}
-            <ul class="navbar-nav animated" id="nav">
+            <ul id="menu-content" class="menu-content collapse out">
                 {% recursetree category %}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/category/{{ node.id}}/{{ node.slug}}" id="karlDropdown" {% if not node.is_leaf_node %}role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" {% endif %}>{{node.title}}</a>
-                        <div class="dropdown-menu" aria-labelledby="karlDropdown">
-                            <ul>
-                                {% if not node.is_leaf_node %}
-
-                                    <li><a class="dropdown-item" href="/category/{{ node.id}}/{{ node.slug}}">{{ children }}</a></li>
-
-                                {% endif %}
-                            </ul>
-                        </div>
+                    <li data-toggle="collapse" data-target="#women" class="collapsed active">
+                        <a  href="/category/{{ node.id}}/{{ node.slug}}" id="karlDropdown" {% if not node.is_leaf_node %}  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" {% endif %}><span class="arrow"></span>{{node.title}}</a>
+                        <ul class="list-links">
+                            {% if not node.is_leaf_node %}
+                                <ul class="dropdown-menu" id="man">
+                                    <li class="sub-menu collapse"><a  href="/category/{{ node.id}}/{{ node.slug}}">{{ children }}</a></li>
+                                </ul>
+                            {% endif %}
+                        </ul>
                     </li>
                 {% endrecursetree %}
             </ul>
